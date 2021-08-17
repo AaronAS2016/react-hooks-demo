@@ -17,10 +17,35 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 600px;
 }
 
 .input-container > * {
   margin: 1em;
+}
+
+.input-container input {
+  padding: 1em 2em;
+  background-color: #222222;
+  width: 100%;
+  color: #fff;
+}
+
+.input-container button {
+  background: #222222;
+  outline: 0;
+  border: 1px  solid#E0FC03;
+  transition: .3s;
+  color: #fff;
+  max-width: 300px;
+  padding: 1em 3em;
+  border-radius: 5px;
+}
+
+.input-container button:hover {
+  background:#E0FC03;
+  color: #222222;
 }
 
 .nota-titulo {
