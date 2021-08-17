@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import './App.css';
 import { NotasContainer } from './NotasContainer';
 import { NotasForm } from './NotasForm';
+import { notasReducer, NOTA_ACTIONS } from "./reducers/notasReducer";
 
 function App() {
 
-  const [notas, setNotas] = useState([]);
-  const [idMax, setIdMax] = useState(0);
+  const [notas, dispatch ] = useReducer(notasReducer, []);
+  
 
   const crearNota = (titulo) => {
-    setNotas([...notas, {id: idMax , titulo }]);
-    setIdMax(idMax + 1);
-  }
+    dispatch(
+        { 
+          type: NOTA_ACTIONS.CREAR_NOTA,
+          payload: { titulo }
+        }
+     )
+  };
 
   return (
     <div className="App">
