@@ -2,7 +2,7 @@ import React from "react";
 
 export const Nota = ({ titulo }) => {
     return (
-        <div>
+        <div className="nota-titulo">
             { titulo }
         </div>
     )

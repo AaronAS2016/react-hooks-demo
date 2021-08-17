@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Coder Notas</h1>
       <NotasForm onSubmit={crearNota} />
       <NotasContainer notas={notas} />
     </div>

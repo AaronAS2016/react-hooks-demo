@@ -1,0 +1,12 @@
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  color: #E0FC03;
+  text-transform: uppercase;
+  font-style: italic;
+}
