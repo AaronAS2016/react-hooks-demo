@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { notasReducer, NOTAS_ACTIONS } from "../reducers/notasReducer";
 
 export const useNotes = (initialState = []) => {
-    const [notas, dispatch] = useReducer(notasReducer, []);
+    const [notas, dispatch] = useReducer(notasReducer, initialState);
 
     const crearNota = (titulo) => {
       dispatch( {type: NOTAS_ACTIONS.CREAR_NOTA, payload:  titulo })
